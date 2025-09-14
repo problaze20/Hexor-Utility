@@ -9,7 +9,7 @@
      Download for Intel / Legacy Macs
   </a>
   &nbsp;|&nbsp;
-  <a href="https://github.com/problaze20/test/releases/download/v1.0.0A/Hexor-util-mac-arm64-v1.0.0.zip">
+  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.2A/Hexor-util-mac-arm64-v1.0.2.zip">
      Download for Apple Silicon
   </a>
 </p>
