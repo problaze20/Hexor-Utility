@@ -1,31 +1,41 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/problaze20/Hexor-Utility/refs/heads/main/Images/readme/HU-Image.png" alt="Image Showing HU" />
+  <img src="https://raw.githubusercontent.com/problaze20/Hexor-Utility/refs/heads/main/Images/readme/HU-Image.png" alt="Hexor Utility Screenshot" />
 </p>
 
-<h2 align="center"> Hexor Utility </h2>
+<h2 align="center">Hexor Utility</h2>
 
 <p align="center">
   <a href="https://github.com/problaze20/Hexor-Utility/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/problaze20/Hexor-Utility?style=flat-square" alt="License" />
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/Current_Version-v1.0.2-d53c50?style=flat-square" alt="Current Version Badge" />
+    <img src="https://img.shields.io/badge/Current_Version-v1.0.2-d53c50?style=flat-square" alt="Current Version" />
   </a>
   <a href="https://github.com/problaze20/Hexor-Utility/blob/main/Installation.md">
-  <img src="https://img.shields.io/badge/Installation_Guide-d53c50?style=flat-square" alt="Installation Guide Badge" />
-</a>
+    <img src="https://img.shields.io/badge/Installation_Guide-d53c50?style=flat-square" alt="Installation Guide" />
+  </a>
 </p>
 
+<p align="center">
+  An open-source, simple Electron color picker made for everyone. Works on macOS.
+</p>
 
-<p align="center"> An Open Source and A Simple Electron Color Picker Made For Everyone. Works On MacOS</p>
+<h3 align="center">Features</h3>
+
+<ul>
+   <li>Use the "Pick From Screen" feature by pressing Shift + P to easily grab colors from your screen.</li>
+   <li>Adjust colors precisely with the intuitive RGB slider.</li>
+   <li>Works seamlessly on both Intel-based Macs and Apple Silicon Macs.</li>
+   <li>Enjoy support for multiple color formats, including HEX, HSL, and CMYK.</li>
+</ul>
 
 
 <p align="center">
   <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.2I/Hexor-util-mac-64x-v1.0.2.zip">
-     Download for Intel / Legacy Macs
+    Download for Intel / Legacy Macs
   </a>
   &nbsp;|&nbsp;
   <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.2A/Hexor-util-mac-arm64-v1.0.2.zip">
-     Download for Apple Silicon
+    Download for Apple Silicon
   </a>
 </p>
