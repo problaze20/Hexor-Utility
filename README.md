@@ -17,13 +17,8 @@
 </p>
 
 
-<p align="center">
-  An open-source, simple Electron color picker made for everyone. Works on macOS.
-  <b>Minimum macOS Version:</b> 12.0 (Monterey)<br>
-<b>Recommended:</b> macOS 12 and later<br>
-
-</p>
-
+<p align="center"> Hexor Utility is a free and open-source color picker designed for macOS, compatible with both Intel and Apple Silicon devices. It allows you to effortlessly grab colors from your screen, copy them in HEX, HSL, or CMYK formats, and fine-tune them using intuitive RGB sliders. </p>
+<p align="center"> <b>Minimum macOS Version:</b> 12.0 (Monterey) | <b>Recommended:</b> macOS 12 and later </p>
 
 <h3 align="center">Features</h3>
 
