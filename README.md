@@ -16,9 +16,14 @@
   </a>
 </p>
 
+
 <p align="center">
   An open-source, simple Electron color picker made for everyone. Works on macOS.
+  <b>Minimum macOS Version:</b> 12.0 (Monterey)<br>
+<b>Recommended:</b> macOS 12 and later<br>
+
 </p>
+
 
 <h3 align="center">Features</h3>
 
