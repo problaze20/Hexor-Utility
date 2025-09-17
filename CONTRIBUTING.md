@@ -1,9 +1,11 @@
-## Contributing  
+## Contributing
 
-Thank you so much for showing interest in contributing to **Hexor Utility**! Your enthusiasm means a lot to us, and we're truly grateful for it.  
+Hey there — thanks for checking out Hexor Utility and thinking about contributing!
 
-Currently, we're not actively accepting contributions. However, there are still ways you can engage with the project:  
-- Feel free to **fork** the repository and use the code for your own projects.  
-- You’re welcome to **open issues** to share feature suggestions or report any bugs you come across. While we may not be able to address them right away, your feedback is always valuable to us!  
+Right now, we're not accepting direct contributions to the repo. It’s still early in development, and we want to keep things focused while we iron out core features and stability.
 
-If contributing is something you'd like to do in the future, stay tuned! As the project evolves, we might open up contributions down the line.
+That said, you're totally welcome to:
+- Fork the repo and build on it however you like
+- Open issues for bugs or feature ideas — we do read them, even if we can’t respond right away
+
+We’ll likely open contributions once things settle a bit. Stay tuned!
