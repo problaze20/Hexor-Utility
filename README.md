@@ -31,11 +31,11 @@
 
 
 <p align="center">
-  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.2I/Hexor-util-mac-64x-v1.0.2.zip">
+  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.3/Hexor-util-mac-64x-v1.0.3.zip">
     Download for Intel / Legacy Macs
   </a>
   &nbsp;|&nbsp;
-  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.2A/Hexor-util-mac-arm64-v1.0.2.zip">
+  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.3/Hexor-util-mac-arm64-v1.0.3.zip">
     Download for Apple Silicon
   </a>
 </p>
