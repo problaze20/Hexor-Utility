@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/github/license/problaze20/Hexor-Utility?style=flat-square" alt="License" />
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/Current_Version-v1.0.2-d53c50?style=flat-square" alt="Current Version" />
+    <img src="https://img.shields.io/badge/Current_Version-v1.0.3-d53c50?style=flat-square" alt="Current Version" />
   </a>
   <a href="https://github.com/problaze20/Hexor-Utility/blob/main/Installation.md">
     <img src="https://img.shields.io/badge/Installation_Guide-d53c50?style=flat-square" alt="Installation Guide" />
