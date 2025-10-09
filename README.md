@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/problaze20/Hexor-Utility/refs/heads/main/Images/Image-v1.0.3.png" alt="Hexor Utility Screenshot" />
+  <img src="https://raw.githubusercontent.com/problaze20/Hexor-Utility/refs/heads/main/Images/IMG-v1.0.4.png" alt="Hexor Utility Screenshot" />
 </p>
 
 <h2 align="center">Hexor Utility</h2>
