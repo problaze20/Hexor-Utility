@@ -5,7 +5,7 @@
 <h2 align="center">Hexor Utility</h2>
 
 <p align="center">
-  Your short tagline or one-liner about the app here.
+
 </p>
 
 <p align="center">
