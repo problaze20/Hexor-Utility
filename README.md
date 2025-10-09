@@ -30,7 +30,7 @@
    <li>Use the "Pick From Screen" feature by pressing <code>Cmd + P</code> to easily grab colors from your screen.</li>
    <li>Adjust colors precisely with the intuitive RGB slider.</li>
    <li>Works seamlessly on both Intel-based Macs and Apple Silicon Macs.</li>
-   <li>Enjoy support for multiple color formats, including HEX, HSL, and CMYK.</li>
+   <li>Enjoy support for multiple color formats, including HEX, HSL, LCH, and CMYK.</li>
 </ul>
 
 
