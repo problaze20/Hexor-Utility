@@ -1,8 +1,12 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/problaze20/Hexor-Utility/refs/heads/main/Images/IMG-v1.0.4.png" alt="Hexor Utility Screenshot" />
+  <img src="https://raw.githubusercontent.com/problaze20/Hexor-Utility/refs/heads/main/Images/hxr-app-icon.v1.04.png" alt="Hexor Utility Icon" width="200" />
 </p>
 
 <h2 align="center">Hexor Utility</h2>
+
+<p align="center">
+  Your short tagline or one-liner about the app here.
+</p>
 
 <p align="center">
   <a href="https://github.com/problaze20/Hexor-Utility/blob/main/LICENSE">
