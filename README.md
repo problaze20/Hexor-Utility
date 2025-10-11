@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/problaze20/Hexor-Utility/refs/heads/main/Images/hxr-app-icon.v1.04.png" alt="Hexor Utility Icon" width="200" />
 </p>
 
-<h2 align="center">Hexor Utility</h2>
+<h1 align="center">Hexor Utility</h1>
 
 <p align="center">
 
@@ -21,7 +21,7 @@
 </p>
 
 
-<p align="center"> Hexor Utility is a free and open-source color picker designed for macOS, compatible with both Intel and Apple Silicon devices. It allows you to effortlessly grab colors from your screen, copy them in HEX, HSL, CYMK or LCH formats, and fine-tune them using intuitive RGB sliders. </p>
+<p align="center"> Hexor Utility is a free and open-source color picker designed for macOS, compatible with both Intel and Apple Silicon devices. </p>
 <p align="center"> <b>Minimum macOS Version:</b> <code>12.0</code> (Monterey) </p>
 
 <h3 align="center">Features</h3>
