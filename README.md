@@ -5,10 +5,6 @@
 <h1 align="center">Hexor Utility</h1>
 
 <p align="center">
-
-</p>
-
-<p align="center">
   <a href="https://github.com/problaze20/Hexor-Utility/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/problaze20/Hexor-Utility?style=flat-square" alt="License" />
   </a>
@@ -19,7 +15,6 @@
     <img src="https://img.shields.io/badge/Installation_Guide-d53c50?style=flat-square" alt="Installation Guide" />
   </a>
 </p>
-
 
 <p align="center"> Hexor Utility is a free and open-source color picker designed for macOS, compatible with both Intel and Apple Silicon devices. </p>
 <p align="center"> <b>Minimum macOS Version:</b> <code>12.0</code> (Monterey) </p>
