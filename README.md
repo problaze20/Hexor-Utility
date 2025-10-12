@@ -26,13 +26,10 @@
 
 <h3 align="center">Features</h3>
 
-<ul>
-   <li>Use the "Pick From Screen" feature by pressing <code>Cmd + P</code> to easily grab colors from your screen.</li>
-   <li>Adjust colors precisely with the intuitive RGB slider.</li>
-   <li>Works seamlessly on both Intel-based Macs and Apple Silicon Macs.</li>
-   <li>Enjoy support for multiple color formats, including HEX, HSL, LCH, and CMYK.</li>
-</ul>
-
+- Use Cmd + P to pick colors from your screen.
+- Adjust colors precisely with the RGB slider.
+- Compatible with Intel and Apple Silicon Macs.
+- Supports multiple color formats: HEX, HSL, LCH, And CMYK.
 
 <p align="center">
   <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.4/Hexor-util-mac-64x-v1.0.4.zip">
