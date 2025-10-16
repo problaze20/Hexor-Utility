@@ -29,14 +29,6 @@
 - Supports multiple color formats: HEX, HSL, LCH, and CMYK.
 
 
-<h2>Why Choose Hexor Utility?</h2>  
-
-Most color pickers out there tend to be either too pricey, limited in the types of color formats they support, or not fully optimized for macOS. Hexor Utility steps in to solve these issues by offering:  
-- A **completely free, simple, and open-source** solution.  
-- Compatibility with **advanced color spaces** like LCH and CMYK, which are hard to find in free tools.  
-- **Support for both Intel and Apple Silicon Macs**, ensuring a seamless experience no matter your system.  
-- A simple and quick keyboard shortcut to easily pick colors from your screen.
-
 ---
 
 <p align="center">
