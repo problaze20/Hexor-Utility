@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/github/license/problaze20/Hexor-Utility?style=flat-square" alt="License" />
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/Version-v1.0.5-d53c50?style=flat-square" alt="Current Version" />
+    <img src="https://img.shields.io/badge/Version-v1.0.6-d53c50?style=flat-square" alt="Current Version" />
   </a>
 </p>
 
@@ -25,7 +25,7 @@
 - Use <kbd>Cmd + P</kbd> to pick colors from your screen.
 - Adjust colors precisely with the RGB slider.
 - Compatible with Intel and Apple Silicon Macs.
-- Supports multiple color formats: HEX, HSL, LCH, LAB and CMYK.
+- Supports multiple color formats: HEX, HSL, HSV, LCH, LAB, CMYK, And XYZ.
 
 <h2> Shortcuts </h2>
 
@@ -35,10 +35,12 @@
 | `Cmd + Option + R` | Generate a random color      |
 | `Shift + Cmd + 1`  | Copy HEX color value         |
 | `Shift + Cmd + 2`  | Copy HSL color value         |
+| `Shift + Cmd + H`  | Copy HSV color value         |
 | `Shift + Cmd + R`  | Copy RGB color value         |
 | `Shift + Cmd + L`  | Copy LCH color value         |
 | `Shift + Cmd + B`  | Copy LAB color value         |
 | `Shift + Cmd + K`  | Copy CMYK color value        |
+| `Shift + Cmd + X`  | Copy XYZ color value         |
 
 
 ---
@@ -49,14 +51,14 @@
   This project is currently maintained solely by the author.
 </p>
 
-<h3 align="center"> Download (v1.0.5) </h3>
+<h3 align="center"> Download (v1.0.6) </h3>
 
 <p align="center">
-  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.5/Hexor-util-mac-64x-v1.0.5.zip">
+  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.5/Hexor.Utility-mac-x64-v1.0.6.zip">
     Download for Intel / Legacy Macs
   </a>
   &nbsp;|&nbsp;
-  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.5/Hexor-util-mac-arm64-v1.0.5.zip">
+  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.5/Hexor.Utility-mac-arm64-v1.0.6.zip">
     Download for Apple Silicon
   </a>
 </p>
