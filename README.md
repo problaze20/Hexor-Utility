@@ -17,7 +17,7 @@
 <p align="center"> Hexor Utility is a free and open-source color picker designed for macOS, compatible with both Intel and Apple Silicon devices. <bp> <b>Minimum macOS Version:</b> <code>12.0</code> (Monterey) </p>
 
 <p align="center">
-  <img src="https://github.com/problaze20/Hexor-Utility/blob/main/Images/Image-v1.0.5.png?raw=true" alt="Hexor Utility Screenshot" width="800" />
+  <img src="https://github.com/problaze20/Hexor-Utility/blob/main/Images/IMG-v1.0.6.png?raw=true" alt="Hexor Utility Screenshot" width="800" />
 </p>
 
 <h2>Features</h2>
