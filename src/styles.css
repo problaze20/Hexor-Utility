@@ -1,0 +1,296 @@
+.titlebar {
+  height: 28px;
+  width: 100%;
+  -webkit-app-region: drag;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(255, 0, 0, 0);
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  color: #000;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.color-box {
+  flex: 1;
+  height: 100vh;
+  border: none;
+}
+
+.controls {
+  width: 350px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #000;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+label {
+  width: 20px;
+}
+
+input[type="range"] {
+  flex-grow: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: transparent;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: none;
+  background: currentColor;
+  cursor: pointer;
+  margin-top: -4px;
+  position: relative;
+  z-index: 2;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: none;
+  background: currentColor;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+input[type="range"]::-moz-range-track {
+  background: transparent;
+  height: 6px;
+}
+
+input[type="range"].red {
+  color: red;
+}
+
+input[type="range"].green {
+  color: green;
+}
+
+input[type="range"].blue {
+  color: blue;
+}
+
+input[type="number"],
+input[type="text"] {
+  font-size: 1rem;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="number"] {
+  width: 50px;
+}
+
+input[type="text"] {
+  width: 150px;
+  text-transform: none;
+}
+
+select {
+  font-size: 1rem;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 0;
+  font-weight: normal;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+
+  .controls {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+
+  input,
+  select {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border-color: transparent;
+  }
+
+  /* ensure the select's displayed text (and SVG icon via currentColor) uses the same color */
+  select#colorFormat {
+    color: #f0f0f0;
+  }
+
+  input[type="text"]::placeholder {
+    color: #aaa;
+  }
+}
+
+input#colorInput {
+  background: transparent;
+  border: none;
+  /* remove any border */
+  outline: none;
+  /* remove outline when not focused / normally */
+  box-shadow: none;
+  /* remove any shadow that might look like border */
+  width: 100px;
+  min-width: 100px;
+  max-width: 100%;
+  /* don't let flexbox shrink the measured width */
+  flex: 0 0 auto;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  box-sizing: content-box;
+}
+
+input#colorInput:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Wrap the select so we can use an inline SVG that reliably inherits currentColor */
+.select-wrap {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: inherit;
+  /* inherit color from parent so SVG follows theme */
+}
+
+select#colorFormat {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding-right: 1.4em;
+  /* room for the SVG icon placed absolutely */
+  position: relative;
+  cursor: pointer;
+}
+
+/* Inline SVG positioned over the select; uses currentColor via stroke="currentColor" */
+.select-wrap svg {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1em;
+  height: 1em;
+  pointer-events: none;
+  /* allow clicks to reach the select */
+  color: inherit;
+  /* inherit from surrounding text color */
+  stroke: currentColor;
+  fill: none;
+}
+
+/* Ensure the path stroke follows currentColor in all browsers */
+.select-wrap svg path {
+  stroke: currentColor !important;
+}
+
+/* Accessible focus style for keyboard users */
+select#colorFormat:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.18);
+  border-radius: 4px;
+}
+
+#widthCalc {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  visibility: hidden;
+  white-space: pre;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: none;
+  padding: 4px;
+  border: none;
+  box-sizing: content-box;
+}
+
+/* Dark mode: background and text color always */
+@media (prefers-color-scheme: dark) {
+
+  #redNumber,
+  #greenNumber,
+  #blueNumber {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    /* subtle border */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+
+  #redNumber,
+  #greenNumber,
+  #blueNumber {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    /* subtle border */
+  }
+}
