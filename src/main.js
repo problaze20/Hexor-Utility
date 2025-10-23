@@ -1,4 +1,3 @@
-// Main process for Hexor Utility - combined features
 const { app, BrowserWindow, Menu, dialog, shell, clipboard } = require('electron');
 const path = require('path');
 
@@ -91,10 +90,12 @@ function makeViewSubmenu() {
 
 	addFormatItem('Copy Hex', 'Shift+CmdOrCtrl+1', `(function(){ const r=+document.getElementById('red').value; const g=+document.getElementById('green').value; const b=+document.getElementById('blue').value; return (typeof rgbToHex === 'function') ? rgbToHex(r,g,b) : '#000000'; })();`);
 	addFormatItem('Copy HSL', 'Shift+CmdOrCtrl+2', `(function(){ const r=+document.getElementById('red').value; const g=+document.getElementById('green').value; const b=+document.getElementById('blue').value; const hsl = (typeof rgbToHsl === 'function') ? rgbToHsl(r,g,b) : null; return hsl ? (hsl.h + ', ' + hsl.s + '%, ' + hsl.l + '%') : ''; })();`);
+	addFormatItem('Copy HSV', 'Shift+CmdOrCtrl+H', `(function(){ const r = +document.getElementById('red').value; const g = +document.getElementById('green').value; const b = +document.getElementById('blue').value; const hsv = (typeof rgbToHsv === 'function') ? rgbToHsv(r, g, b) : null; return hsv ? (hsv.h + ', ' + hsv.s + '%, ' + hsv.v + '%') : ''; })();`);
 	addFormatItem('Copy RGB', 'Shift+CmdOrCtrl+R', `(function(){ const r=+document.getElementById('red').value; const g=+document.getElementById('green').value; const b=+document.getElementById('blue').value; return r + ', ' + g + ', ' + b; })();`);
 	addFormatItem('Copy LCH', 'Shift+CmdOrCtrl+L', `(function(){ const r=+document.getElementById('red').value; const g=+document.getElementById('green').value; const b=+document.getElementById('blue').value; const lch = (typeof rgbToLch === 'function') ? rgbToLch(r,g,b) : null; return lch ? (lch.l + '%, ' + lch.c + ', ' + lch.h) : ''; })();`);
 	addFormatItem('Copy LAB', 'Shift+CmdOrCtrl+B', `(function(){ const r=+document.getElementById('red').value; const g=+document.getElementById('green').value; const b=+document.getElementById('blue').value; const lab = (typeof rgbToLab === 'function') ? rgbToLab(r,g,b) : null; return lab ? (lab.l + ', ' + lab.a + ', ' + lab.b) : ''; })();`);
 	addFormatItem('Copy CMYK', 'Shift+CmdOrCtrl+K', `(function(){ const r=+document.getElementById('red').value; const g=+document.getElementById('green').value; const b=+document.getElementById('blue').value; const cmyk = (typeof rgbToCmyk === 'function') ? rgbToCmyk(r,g,b) : null; return cmyk ? (cmyk.c + '%, ' + cmyk.m + '%, ' + cmyk.y + '%, ' + cmyk.k + '%') : ''; })();`);
+	addFormatItem('Copy XYZ', 'Shift+CmdOrCtrl+X', `(function(){ const r = +document.getElementById('red').value; const g = +document.getElementById('green').value; const b = +document.getElementById('blue').value; const xyz = (typeof rgbToXyz === 'function') ? rgbToXyz(r, g, b) : null; return xyz ? (xyz.x + ', ' + xyz.y + ', ' + xyz.z) : ''; })();`);
 
 	return viewSubmenu;
 }
@@ -115,15 +116,12 @@ app.whenReady().then(() => {
 							type: 'info',
 							title: `About ${app.name}`,
 							message: `${app.name} v${app.getVersion()}`,
-							detail: 'A simple color picker app for macOS made by problaze20.',
-							buttons: ['OK', 'Visit Repository'],
+							detail: 'The Simple, And Open-Source Color Picker App On Your Mac',
+							buttons: ['OK'],
 							defaultId: 0,
 							cancelId: 0
-						}).then(result => {
-							if (result.response === 1) {
-								shell.openExternal('https://github.com/problaze20/Hexor-Utility');
-							}
 						});
+
 					}
 				},
 				{ type: 'separator' },
