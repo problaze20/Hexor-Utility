@@ -14,3 +14,4 @@ contextBridge.exposeInMainWorld('electronAPI', {
 		ipcRenderer.on('generate-random-color', (event, ...args) => callback(...args));
 	}
 });
+
