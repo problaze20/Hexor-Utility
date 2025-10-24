@@ -6,7 +6,7 @@ let mainWindow;
 function createWindow() {
 	mainWindow = new BrowserWindow({
 		width: 550,
-		height: 250,
+		height: 251,
 		resizable: false,
 		fullscreenable: false,
 		frame: false, // Frameless window
