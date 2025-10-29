@@ -34,14 +34,15 @@
 | ------------------ | ---------------------------- |
 | `Cmd + P`          | Pick colors from your screen |
 | `Cmd + Option + R` | Generate a random color      |
-| `Shift + Cmd + 1`  | Copy HEX color value         |
-| `Shift + Cmd + 2`  | Copy HSL color value         |
-| `Shift + Cmd + H`  | Copy HSV color value         |
-| `Shift + Cmd + R`  | Copy RGB color value         |
-| `Shift + Cmd + L`  | Copy LCH color value         |
-| `Shift + Cmd + B`  | Copy LAB color value         |
-| `Shift + Cmd + K`  | Copy CMYK color value        |
-| `Shift + Cmd + X`  | Copy XYZ color value         |
+| `Opt + 1`          | Copy HEX color value         |
+| `Opt + 2`          | Copy HSL color value         |
+| `Opt + 3`          | Copy HSV color value         |
+| `Opt + 4`          | Copy RGB color value         |
+| `Opt + 5`          | Copy LCH color value         |
+| `Opt + 6`          | Copy LAB color value         |
+| `Opt + 7`          | Copy CMYK color value        |
+| `Opt + 8`          | Copy XYZ color value         |
+| `Opt + 9`          | Copy Unit RGB color value    |
 
 
 ---
