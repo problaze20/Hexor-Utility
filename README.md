@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/problaze20/Hexor-Utility/blob/main/Images/Icon-v1.0.5.png?raw=true" alt="Hexor Utility Icon" width="200" />
+  <img src="https://github.com/problaze20/Hexor-Utility/blob/main/Images/v1.0.7-ICON.png?raw=true" alt="Hexor Utility Icon" width="200" />
 </p>
 
 <h1 align="center">Hexor Utility</h1>
@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/github/license/problaze20/Hexor-Utility?style=flat-square" alt="License" />
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/Version-v1.0.6-d53c50?style=flat-square" alt="Current Version" />
+    <img src="https://img.shields.io/badge/Version-v1.0.7-d53c50?style=flat-square" alt="Current Version" />
   </a>
 </p>
 
@@ -18,7 +18,7 @@
 <p align="center"> <b>Requirements</b>: MacOS 12.0 (Monterey) Or Above </p>
 
 <p align="center">
-  <img src="https://github.com/problaze20/Hexor-Utility/blob/main/Images/IMG-v1.0.6.png?raw=true" alt="Hexor Utility Screenshot" width="800" />
+  <img src="https://github.com/problaze20/Hexor-Utility/blob/main/Images/Image-v1.0.7.png?raw=true" alt="Hexor Utility Screenshot" width="800" />
 </p>
 
 <h2>Features</h2>
