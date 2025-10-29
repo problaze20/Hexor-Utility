@@ -1,8 +1,6 @@
 ## Installation
 
-1. **Download** the app for your macOS architecture:  
-   -  [Intel Macs](https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.6/Hexor.Utility-mac-x64-v1.0.6.zip)  
-   -  [Apple Silicon (M1/M2)](https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.6/Hexor.Utility-mac-arm64-v1.0.6.zip)
+1. **Download** the app from the Releases
 
 2. **Unzip** the downloaded `.zip` file.
 > Info:
