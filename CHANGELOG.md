@@ -1,6 +1,20 @@
 # Changelog
 
-## [1.0.6] (Latest)
+## [1.0.7] (Latest)
+- Removed RGB Label Next To RGB Sliders
+- Added Eyedropper, Copy, and Generate Random Colors Button
+- Added Option To Copy Unit RGB (Opt+9)
+- Updated Shortcuts:
+	- Copy HEX (From Shift+Cmd+1 To Opt+1)
+	- Copy HSL (From Shift+Cmd+2 To Opt+2)
+	- Copy HSV (From Shift+Cmd+H To Opt+3)
+	- Copy RGB (From Shift+Cmd+R To Opt+4)
+	- Copy LCH (From Shift+Cmd+L To Opt+5)
+	- Copy LAB (From Shift+Cmd+B To Opt+6)
+	- Copy CMYK (From Shift+Cmd+K To Opt+7)
+	- Copy XYZ (From Shift+Cmd+X To Opt+8)
+ 
+## [1.0.6]
 - Converted **Hex Values** to uppercase
 - Added **HSV And XYZ** Support
 - Improved The **RGB Input** UI
