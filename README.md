@@ -52,14 +52,14 @@
   This project is currently maintained solely by the author.
 </p>
 
-<h3 align="center"> Download (v1.0.6) </h3>
+<h3 align="center"> Download (v1.0.7) </h3>
 
 <p align="center">
-  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.6/Hexor.Utility-mac-x64-v1.0.6.zip">
+  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.7/hexor-utility-mac-x64-v1.0.7.zip">
     Download for Intel / Legacy Macs
   </a>
   &nbsp;|&nbsp;
-  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.6/Hexor.Utility-mac-arm64-v1.0.6.zip">
+  <a href="https://github.com/problaze20/Hexor-Utility/releases/download/v1.0.7/hexor-utility-mac-arm64-v1.0.7.zip">
     Download for Apple Silicon
   </a>
 </p>
