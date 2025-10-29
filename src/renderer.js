@@ -1,9 +1,51 @@
 
-function setRGBandUpdate(r, g, b) {
+// Color history for undo/redo
+const colorHistory = [];
+let currentHistoryIndex = -1;
+const MAX_HISTORY = 100; // Prevent memory bloat
+
+function pushColorToHistory(r, g, b) {
+  // Remove any redo states
+  if (currentHistoryIndex < colorHistory.length - 1) {
+    colorHistory.splice(currentHistoryIndex + 1);
+  }
+  
+  // Add new color
+  colorHistory.push({r, g, b});
+  
+  // Maintain history size limit
+  if (colorHistory.length > MAX_HISTORY) {
+    colorHistory.shift();
+  }
+  
+  currentHistoryIndex = colorHistory.length - 1;
+}
+
+function undoColor() {
+  if (currentHistoryIndex > 0) {
+    currentHistoryIndex--;
+    const {r, g, b} = colorHistory[currentHistoryIndex];
+    setRGBandUpdate(r, g, b, false); // false = don't record in history
+  }
+}
+
+function redoColor() {
+  if (currentHistoryIndex < colorHistory.length - 1) {
+    currentHistoryIndex++;
+    const {r, g, b} = colorHistory[currentHistoryIndex];
+    setRGBandUpdate(r, g, b, false); // false = don't record in history
+  }
+}
+
+function setRGBandUpdate(r, g, b, recordHistory = true) {
   sliderElements.red.value = r;
   sliderElements.green.value = g;
   sliderElements.blue.value = b;
   updateColorDisplay(r, g, b);
+  
+  if (recordHistory) {
+    pushColorToHistory(r, g, b);
+  }
 }
 
 const sliders = ["red", "green", "blue"];
@@ -631,6 +673,11 @@ sliders.forEach(color => {
   sliderElements[color].addEventListener("input", () => {
     numberInputs[color].value = sliderElements[color].value;
     syncFromSliders();
+    // Record history after user finishes dragging
+    const r = Number(sliderElements.red.value);
+    const g = Number(sliderElements.green.value);
+    const b = Number(sliderElements.blue.value);
+    pushColorToHistory(r, g, b);
   });
   numberInputs[color].addEventListener("input", () => {
     let val = Number(numberInputs[color].value);
@@ -638,6 +685,11 @@ sliders.forEach(color => {
     numberInputs[color].value = val;
     sliderElements[color].value = val;
     syncFromNumbers();
+    // Record history after number input changes
+    const r = Number(sliderElements.red.value);
+    const g = Number(sliderElements.green.value);
+    const b = Number(sliderElements.blue.value);
+    pushColorToHistory(r, g, b);
   });
 });
 
@@ -656,8 +708,53 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () 
   sliders.forEach(color => updateSliderFill(sliderElements[color]));
 });
 
-// EyeDropper (Cmd + P)
+// Eyedropper button click handler
+document.getElementById('eyedropperBtn').addEventListener('click', async () => {
+  try {
+    const eyeDropper = new EyeDropper();
+    const result = await eyeDropper.open();
+    const color = result.sRGBHex;
+    const rgb = hexToRgb(color.substring(1));
+    if (rgb) {
+      setRGBandUpdate(rgb.r, rgb.g, rgb.b);
+    }
+  } catch (e) {
+    console.error('EyeDropper failed:', e);
+  }
+});
+
+// Generate Random Color button handler
+const genBtn = document.getElementById('genRandColBtn');
+if (genBtn) {
+  genBtn.addEventListener('click', () => {
+    // generate random color and update UI
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    if (typeof setRGBandUpdate === 'function') setRGBandUpdate(r, g, b);
+  });
+}
+
+// Handle keyboard shortcuts (Cmd+Z, Cmd+Shift+Z, Cmd+P)
 window.addEventListener("keydown", async (e) => {
+  // Don't handle shortcuts when focused on input elements
+  if (document.activeElement.tagName === 'INPUT') return;
+
+  // Handle Cmd+Z for undo
+  if (e.metaKey && !e.shiftKey && (e.key === "z" || e.key === "Z")) {
+    e.preventDefault();
+    undoColor();
+    return;
+  }
+
+  // Handle Cmd+Shift+Z for redo
+  if (e.metaKey && e.shiftKey && (e.key === "z" || e.key === "Z")) {
+    e.preventDefault();
+    redoColor();
+    return;
+  }
+
+  // Handle Cmd+P for eyedropper
   if (e.metaKey && (e.key === "P" || e.key === "p")) {
     e.preventDefault();
     if ("EyeDropper" in window) {
@@ -706,3 +803,104 @@ if (window.electronAPI && typeof window.electronAPI.onGenerate === 'function') {
     }
   });
 }
+
+// Copy button color contrast and functionality
+function updateCopyButtonContrast() {
+  const r = Number(sliderElements.red.value);
+  const g = Number(sliderElements.green.value);
+  const b = Number(sliderElements.blue.value);
+  
+  // Calculate relative luminance
+  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  
+  // Set icon color based on background luminance
+  const copyIcon = document.querySelector('.copy-icon');
+  if (luminance > 0.5) {
+    copyIcon.style.color = '#000000';
+  } else {
+    copyIcon.style.color = '#ffffff';
+  }
+}
+
+// Copy format handling
+document.getElementById('copyFormat').addEventListener('change', (e) => {
+  const format = e.target.value;
+  const r = Number(sliderElements.red.value);
+  const g = Number(sliderElements.green.value);
+  const b = Number(sliderElements.blue.value);
+  let copyText = '';
+  
+  switch (format) {
+    case 'swiftui':
+      copyText = `Color(red: ${(r/255).toFixed(3)}, green: ${(g/255).toFixed(3)}, blue: ${(b/255).toFixed(3)})`;
+      break;
+    case 'flutter-hex':
+      copyText = `Color(0xFF${componentToHex(r)}${componentToHex(g)}${componentToHex(b)})`;
+      break;
+    case 'flutter-rgb':
+      copyText = `Color.fromRGBO(${r}, ${g}, ${b}, 1.0)`;
+      break;
+    case 'css-rgb':
+      copyText = `rgb(${r}, ${g}, ${b})`;
+      break;
+    case 'css-hsl':
+      const hsl = rgbToHsl(r, g, b);
+      copyText = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
+      break;
+    case 'hex':
+      copyText = rgbToHex(r, g, b);
+      break;
+  }
+  
+  if (copyText) {
+    navigator.clipboard.writeText(copyText).then(() => {
+      e.target.value = ''; // Reset dropdown
+      document.getElementById('copyFormat').classList.remove('show'); // Hide dropdown after selection
+    }).catch(err => console.error('Failed to copy:', err));
+  }
+});
+
+// Update copy button contrast when color changes
+function updateColorDisplay(r, g, b) {
+  sliders.forEach(color => updateSliderFill(sliderElements[color]));
+  if (Number(numberInputs.red.value) !== r) numberInputs.red.value = r;
+  if (Number(numberInputs.green.value) !== g) numberInputs.green.value = g;
+  if (Number(numberInputs.blue.value) !== b) numberInputs.blue.value = b;
+  valueDisplays.colorBox.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  updateCopyButtonContrast(); // Add this line
+  const format = valueDisplays.formatSelect.value;
+  if (format === "hex") {
+    valueDisplays.colorInput.value = rgbToHex(r, g, b).toUpperCase();
+    scheduleUpdateWidth();
+  } else if (format === "hsl") {
+    const hsl = rgbToHsl(r, g, b);
+    valueDisplays.colorInput.value = `${hsl.h}, ${hsl.s}%, ${hsl.l}%`;
+    scheduleUpdateWidth();
+  } else if (format === "cmyk") {
+    const cmyk = rgbToCmyk(r, g, b);
+    valueDisplays.colorInput.value = `${cmyk.c}%, ${cmyk.m}%, ${cmyk.y}%, ${cmyk.k}%`;
+    scheduleUpdateWidth();
+  } else if (format === "lch") {
+    const lch = rgbToLch(r, g, b);
+    valueDisplays.colorInput.value = `${lch.l}%, ${lch.c}, ${lch.h}`;
+    scheduleUpdateWidth();
+  } else if (format === "lab") {
+    const lab = rgbToLab(r, g, b);
+    valueDisplays.colorInput.value = `${lab.l}, ${lab.a}, ${lab.b}`;
+    scheduleUpdateWidth();
+  } else if (format === "hsv") {
+    const hsv = rgbToHsv(r, g, b);
+    valueDisplays.colorInput.value = `${hsv.h}, ${hsv.s}%, ${hsv.v}%`;
+    scheduleUpdateWidth();
+  } else if (format === "xyz") {
+    const xyz = rgbToXyz(r, g, b);
+    valueDisplays.colorInput.value = `${xyz.x}, ${xyz.y}, ${xyz.z}`;
+    scheduleUpdateWidth();
+  }
+}
+
+// Clear history when window closes
+window.addEventListener('beforeunload', () => {
+  colorHistory.length = 0;
+  currentHistoryIndex = -1;
+});
