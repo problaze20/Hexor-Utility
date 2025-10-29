@@ -1,7 +1,7 @@
 {
 	"name": "hexor-utility",
-	"version": "1.0.6",
-	"description": "A simple color picker app for MacOS made by problaze20 (https://github.com/problaze20)",
+	"version": "1.0.7",
+	"description": "The Free Color Picker On your Mac",
 	"main": "main.js",
 	"scripts": {
 		"start": "electron .",
@@ -10,9 +10,11 @@
 		"build": "npm run dist"
 	},
 	"build": {
+		"asar": true,
+		"extraResources": [],
 		"appId": "com.hi.problaze20.hexorutility",
 		"productName": "Hexor Utility",
-		"artifactName": "${productName}-${os}-${arch}-v${version}.${ext}",
+		"artifactName": "${name}-${os}-${arch}-v${version}.${ext}",
 		"mac": {
 			"target": [
 				"zip"
