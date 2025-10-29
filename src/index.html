@@ -14,17 +14,14 @@
   <div class="color-box" id="colorBox" aria-live="polite" aria-label="Color preview box"></div>
   <div class="controls" role="region" aria-label="Color controls">
     <div class="slider-container">
-      <label for="red">R</label>
       <input type="range" id="red" class="red" min="0" max="255" value="255" aria-label="Red value slider" />
       <input type="number" id="redNumber" min="0" max="255" value="255" aria-label="Red value input" />
     </div>
     <div class="slider-container">
-      <label for="green">G</label>
       <input type="range" id="green" class="green" min="0" max="255" value="0" aria-label="Green value slider" />
       <input type="number" id="greenNumber" min="0" max="255" value="0" aria-label="Green value input" />
     </div>
     <div class="slider-container">
-      <label for="blue">B</label>
       <input type="range" id="blue" class="blue" min="0" max="255" value="0" aria-label="Blue value slider" />
       <input type="number" id="blueNumber" min="0" max="255" value="0" aria-label="Blue value input" />
     </div>
@@ -47,10 +44,36 @@
       <input type="text" id="colorInput" maxlength="20" value="#ff0000" aria-label="Color value input"
         spellcheck="false" />
     <div id="widthCalc"></div>
-
     </p>
   </div>
 
+  <div class="copy-container">
+    <div class="copy-wrapper">
+      <svg class="copy-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M3 16V4C3 2.89543 3.89543 2 5 2H15M9 22H18C19.1046 22 20 21.1046 20 20V8C20 6.89543 19.1046 6 18 6H9C7.89543 6 7 6.89543 7 8V20C7 21.1046 7.89543 22 9 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+      <select id="copyFormat" class="copy-select" aria-label="Copy color format">
+        <option value="" disabled selected>Copy as...</option>
+        <option value="swiftui">SwiftUI RGB</option>
+        <option value="flutter-hex">Flutter HEX</option>
+        <option value="flutter-rgb">Flutter RGB</option>
+        <option value="css-rgb">CSS RGB</option>
+        <option value="css-hsl">CSS HSL</option>
+        <option value="hex">HEX</option>
+      </select>
+    </div>
+  </div>
+
+  <button id="eyedropperBtn" aria-label="Pick color with eyedropper" title="Eyedropper Tool">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+      <path fill-rule="evenodd" d="M12.1 3.667a3.502 3.502 0 1 1 6.782 1.738 3.487 3.487 0 0 1-.907 1.57 3.495 3.495 0 0 1-1.617.919L16 7.99V10a.75.75 0 0 1-.22.53l-.25.25a.75.75 0 0 1-1.06 0l-.845-.844L7.22 16.34A2.25 2.25 0 0 1 5.629 17H5.12a.75.75 0 0 0-.53.22l-1.56 1.56a.75.75 0 0 1-1.061 0l-.75-.75a.75.75 0 0 1 0-1.06l1.56-1.561a.75.75 0 0 0 .22-.53v-.508c0-.596.237-1.169.659-1.59l6.405-6.406-.844-.845a.75.75 0 0 1 0-1.06l.25-.25A.75.75 0 0 1 10 4h2.01l.09-.333ZM4.72 13.84l6.405-6.405 1.44 1.439-6.406 6.405a.75.75 0 0 1-.53.22H5.12c-.258 0-.511.044-.75.129a2.25 2.25 0 0 0 .129-.75v-.508a.75.75 0 0 1 .22-.53Z" clip-rule="evenodd" />
+    </svg>
+  </button>
+
+  <!-- Generate Random Color button (transparent, no text) -->
+  <button id="genRandColBtn" aria-label="Generate random color" title="Generate Random Color">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+      <path fill-rule="evenodd" d="M10 4.5c1.215 0 2.417.055 3.604.162a.68.68 0 0 1 .615.597c.124 1.038.208 2.088.25 3.15l-1.689-1.69a.75.75 0 0 0-1.06 1.061l2.999 3a.75.75 0 0 0 1.06 0l3.001-3a.75.75 0 1 0-1.06-1.06l-1.748 1.747a41.31 41.31 0 0 0-.264-3.386 2.18 2.18 0 0 0-1.97-1.913 41.512 41.512 0 0 0-7.477 0 2.18 2.18 0 0 0-1.969 1.913 41.16 41.16 0 0 0-.16 1.61.75.75 0 1 0 1.495.12c.041-.52.093-1.038.154-1.552a.68.68 0 0 1 .615-.597A40.012 40.012 0 0 1 10 4.5ZM5.281 9.22a.75.75 0 0 0-1.06 0l-3.001 3a.75.75 0 1 0 1.06 1.06l1.748-1.747c.042 1.141.13 2.27.264 3.386a2.18 2.18 0 0 0 1.97 1.913 41.533 41.533 0 0 0 7.477 0 2.18 2.18 0 0 0 1.969-1.913c.064-.534.117-1.071.16-1.61a.75.75 0 1 0-1.495-.12c-.041.52-.093 1.037-.154 1.552a.68.68 0 0 1-.615.597 40.013 40.013 0 0 1-7.208 0 .68.68 0 0 1-.615-.597 39.785 39.785 0 0 1-.25-3.15l1.689 1.69a.75.75 0 0 0 1.06-1.061l-2.999-3Z" clip-rule="evenodd" />
+    </svg>
+  </button>
   <script src="renderer.js"></script>
 </body>
 
