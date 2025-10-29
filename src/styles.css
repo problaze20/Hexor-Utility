@@ -271,6 +271,118 @@ select#colorFormat:focus {
 }
 
 /* Dark mode: background and text color always */
+/* Eyedropper button styles */
+#eyedropperBtn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#eyedropperBtn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Generate Random Color button: transparent, positioned left of eyedropper */
+#genRandColBtn {
+  position: fixed;
+  bottom: 10px;
+  /* place to the left of the eyedropper (eyedropper right:10px, this ~36px wider) */
+  right: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#genRandColBtn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.copy-container {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.copy-wrapper {
+  position: relative;
+  width: 34px;
+  height: 34px;
+}
+
+.copy-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 8px;
+  top: 8px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.copy-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.copy-select option {
+  background-color: #fff;
+  color: #000;
+  padding: 8px;
+  opacity: 1;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .copy-select option {
+    background: #2a2a2a;
+    color: #f0f0f0;
+  }
+
+  #genRandColBtn {
+    color: #f0f0f0;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  #genRandColBtn {
+    color: #000;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #eyedropperBtn {
+    color: #f0f0f0;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  #eyedropperBtn {
+    color: #000;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
 
   #redNumber,
@@ -291,6 +403,30 @@ select#colorFormat:focus {
     background-color: #fff;
     color: #000;
     border: 1px solid #ccc;
+    /* subtle border */
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  #redNumber:focus,
+  #greenNumber:focus,
+  #blueNumber:focus {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border: 1px solid accent-color;
+    /* subtle border */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+
+  #redNumber:focus,
+  #greenNumber:focus,
+  #blueNumber:focus {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid accent-color;
     /* subtle border */
   }
 }
