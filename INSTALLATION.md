@@ -1,6 +1,6 @@
-## Installation
+# Installation
 
-1. **Download** the app from the Releases
+1. **Download** the app from [Releases](https://github.com/problaze20/Hexor-Utility/releases)
 
 2. **Unzip** the downloaded `.zip` file.
 > Info:
