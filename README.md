@@ -11,6 +11,9 @@
   <a href="#">
     <img src="https://img.shields.io/badge/Version-v1.0.7-d53c50?style=flat-square" alt="Current Version" />
   </a>
+  <a href="https://www.electronjs.org">
+    <img src="https://img.shields.io/badge/-electron-555555?style=flat-square&labelColor=17202A&logo=electron&logoColor=61DBFB" alt="Made With Electron" />
+  </a>
 </p>
 
 <p align="center"> <a href="https://github.com/problaze20/Hexor-Utility/blob/main/INSTALLATION.md"> Installation</a> - <a href="https://github.com/problaze20/Hexor-Utility/blob/main/LICENSE"> License </a> - <a href="https://github.com/problaze20/Hexor-Utility/blob/main/CHANGELOG.md"> Changelog </a> </p>
