@@ -57,8 +57,9 @@
 1. **Download** the `.zip` file from [Releases](https://github.com/problaze20/Hexor-Utility/releases)
 
 2. **Unzip** the downloaded `.zip` file.
-   > Note:
-   > Safari automatically unzips your files if the **Open "Safe" Files After Downloading** setting is enabled. If so, you can skip step 2.
+
+> [!NOTE]
+> Safari automatically unzips your files if the **Open "Safe" Files After Downloading** setting is enabled. If so, you can skip step 2.
 
 3. **Important**:  
    macOS may block the app since it's unsigned.  
