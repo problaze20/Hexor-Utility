@@ -83,7 +83,7 @@
    - Click `Open Anyway`  
    - When prompted, confirm by selecting `Open`
 
-5. (Optional) Drag **Hexor Utility.app** to your **Applications** folder for easy access.
+4. (Optional) Drag **Hexor Utility.app** to your **Applications** folder for easy access.
    
 <h3 align="center"> Download (v1.0.7) </h3>
 
