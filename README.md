@@ -26,9 +26,8 @@
 
 <h2>Features</h2>
 
-- Use <kbd>Cmd + P</kbd> to pick colors from your screen.  
+- <kbd>Cmd + P</kbd> to pick a color from your screen.
 - Use <kbd>Cmd + Opt + R</kbd> to generate a random color.  
-- Adjust colors precisely with RGB sliders.  
 - Compatible with both Intel and Apple Silicon Macs.  
 - Copy colors in multiple formats:
   - **App frameworks:** SwiftUI RGB, Flutter HEX / RGB  
