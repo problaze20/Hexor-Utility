@@ -18,6 +18,7 @@
         <a href="https://github.com/problaze20/Hexor-Utility/blob/main/INSTALLATION.md">Installation Instructions</a>
     </p>
     <img src="https://raw.githubusercontent.com/problaze20/Hexor-Utility/refs/heads/main/Images/Image-v1.0.7.png" alt="Screenshot" width="700" />
+    <p> The MacOS Color Picker App Made with HTML/CSS/JS  <br> <b> Requirements: </b> MacOS <code>12.0</code> Monterey Or Above</p>
 </div>
 
 ## Features
