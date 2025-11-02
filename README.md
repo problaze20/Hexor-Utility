@@ -78,13 +78,3 @@
    - When prompted, confirm by selecting `Open`
 
 4. (Optional) Drag **Hexor Utility.app** to your **Applications** folder for easy access.
-
----
-
-<p align="center">
-  Hexor Utility is licensed under the <a href="https://github.com/problaze20/Hexor-Utility/blob/main/LICENSE">MIT License</a>, made using <a href="https://electronjs.org">Electron</a>
-, and developed by <a href="https://github.com/problaze20/">problaze20</a>.  
-  This project is currently maintained solely by the author.
-</p>
-
----
