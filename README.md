@@ -21,6 +21,9 @@
     <p> The MacOS Color Picker App Made with HTML/CSS/JS  <br> <b> Requirements: </b> MacOS <code>12.0</code> Monterey Or Above</p>
 </div>
 
+> This will be discontinued
+> you can fork and continue it as you wish
+
 ## Features
 - <kbd>Cmd + P</kbd> to __pick a color from your screen__.
 - Use <kbd>Cmd + Opt + R</kbd> to __generate a random color__.  
