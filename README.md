@@ -1,3 +1,11 @@
+### ⚠️ Project Discontinued
+
+**Hexor Utility** is officially **discontinued as of November 2025**.  
+There is **no active support or maintenance** for this project.  
+You’re welcome to **fork this repository** and continue development under the MIT license.  
+
+Thank you to everyone who used the app ❤️
+
 <div align='center'">
     <img src="https://raw.githubusercontent.com/problaze20/Hexor-Utility/refs/heads/main/Images/v1.0.7-ICON.png" width="170px" alt="Hexor Utility Icon">
     <h1>Hexor Utility</h1>
@@ -21,8 +29,6 @@
     <p> The MacOS Color Picker App Made with HTML/CSS/JS  <br> <b> Requirements: </b> MacOS <code>12.0</code> Monterey Or Above</p>
 </div>
 
-> This will be discontinued
-> you can fork and continue it as you wish
 
 ## Features
 - <kbd>Cmd + P</kbd> to __pick a color from your screen__.
