@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/problaze20/Hexor-Utility/refs/heads/main/Images/v1.0.7-ICON.png" width="100px" align="center" alt="Electron Fiddle icon"> Hexor Utility
+# <img src="https://raw.githubusercontent.com/problaze20/Hexor-Utility/refs/heads/main/Images/v1.0.7-ICON.png" width="100px" align="center" alt="Hexor Utility Icon"> Hexor Utility
 
 [![License](https://img.shields.io/github/license/problaze20/Hexor-Utility?style=flat-square)](https://github.com/problaze20/Hexor-Utility/blob/main/LICENSE) 
 [![Current Version](https://img.shields.io/badge/Version-v1.0.7-d53c50?style=flat-square)](#) 
